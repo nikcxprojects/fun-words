@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="#bd494b"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="258dp"
+        android:layout_height="157dp"
+        android:background="@drawable/privat_1"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/policy"
+        android:layout_width="304dp"
+        android:layout_height="258dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/privat_2"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/accept"
+            android:layout_width="146dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/privat_3"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/decline"
+            android:layout_width="146dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/privat_4"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

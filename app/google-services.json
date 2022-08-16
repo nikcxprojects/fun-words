@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "526561801592",
+    "project_id": "fonbet-r2d2",
+    "storage_bucket": "fonbet-r2d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526561801592:android:9fc1f727cfbd969a2e048d",
+        "android_client_info": {
+          "package_name": "com.funwords.worldssports"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526561801592-iqs6jeevhl6v7eoqrhihmaurgvgiobd1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMAUhH8-4l-34CPfPP-ljW34uqdDaWs9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526561801592-iqs6jeevhl6v7eoqrhihmaurgvgiobd1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

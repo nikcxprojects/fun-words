@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Fon W</string>
+    <string name="setting">FUN WORDS</string>
+    <string name="main_menu">FUN WORDS</string>
+    <string name="seconds">FUN WORDS</string>
+    <string name="second">FUN WORDS</string>
+    <string name="complete">FUN WORDS</string>
+    <string name="completed_in">FUN WORDS</string>
+    <string name="dont_find">FUN WORDS</string>
+
+    <string name="splash_name">Loading</string>
+
+    <string name="image_chooser">File Chooser</string>
+
+    <string name="No_internet">No internet connection!</string>
+    <string name="No_internet_info">Try doing the following:</string>
+    <string name="No_internet_info_1"> - turn off airplane mode</string>
+    <string name="No_internet_info_2"> - check network signal strength</string>
+    <string name="No_internet_info_3"> - turn on Wi-fi or mobile Internet</string>
+</resources>
