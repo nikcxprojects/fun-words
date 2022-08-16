@@ -32,7 +32,7 @@ jobs:
         uses: adityak74/google-drive-upload-git-action@v0.2
         with:
           credentials: ${{ secrets.credentials }}
-          filename: "app/build/outputs/bundle/release/app-release.aab"
+          filename: "app/build/outputs/bundle/release/release.aab"
           folderId: ${{ secrets.folderId }}
           name: ${{ secrets.APP_NAME }}.aab
           overwrite: "true" # optional boolean
@@ -46,7 +46,7 @@ jobs:
         uses: adityak74/google-drive-upload-git-action@v0.2
         with:
           credentials: ${{ secrets.credentials }}
-          filename: "app/build/outputs/apk/release/app-release.apk"
+          filename: "app/build/outputs/apk/release/release.apk"
           folderId: ${{ secrets.folderId }}
           name: ${{ secrets.APP_NAME }}.apk
           overwrite: "true" # optional boolean
