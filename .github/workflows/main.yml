@@ -23,19 +23,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         
-      - uses: actions/download-artifact@v2
-        with:
-          name: release.aab
-          path: app/build/outputs/bundle/release/
+      #- uses: actions/download-artifact@v2
+        #with:
+         # name: release.aab
+         # path: app/build/outputs/bundle/release/
 
-      - name: Upload to google drive AAB
-        uses: adityak74/google-drive-upload-git-action@v0.2
-        with:
-          credentials: ${{ secrets.credentials }}
-          filename: "app/build/outputs/bundle/release/app-release.aab"
-          folderId: ${{ secrets.folderId }}
-          name: ${{ secrets.APP_NAME }}.aab
-          overwrite: "true" # optional boolean
+      #- name: Upload to google drive AAB
+       # uses: adityak74/google-drive-upload-git-action@v0.2
+       # with:
+         # credentials: ${{ secrets.credentials }}
+         # filename: "app/build/outputs/bundle/release/app-release.aab"
+         # folderId: ${{ secrets.folderId }}
+         # name: ${{ secrets.APP_NAME }}.aab
+         # overwrite: "true" # optional boolean
           
       - uses: actions/download-artifact@v2
         with:
