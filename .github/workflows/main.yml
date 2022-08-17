@@ -59,3 +59,46 @@ jobs:
            with:
                 name: ${{ secrets.APP_NAME }}.apk
                 path: app/build/outputs/apk/debug/
+                
+    Compile_AAB:
+      runs-on: ubuntu-latest
+      
+      steps:
+         - uses: actions/checkout@v2
+           name: Checkout project
+           
+         - uses: actions/setup-java@v2
+           name: Set up JDK
+           with:
+                java-version: '11'
+                distribution: 'adopt'
+                cache: gradle
+    
+         - uses: actions/cache@v2
+           name: Caching Gradle
+           with:
+                path: |
+                    ~/.gradle/caches
+                    ~/.gradle/wrapper
+                key: ${{ runner.os }}-${{ hashFiles('**/*.gradle*') }}-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/buildSrc/**/*.kt') }}
+           
+         - name: Grant execute permission for gradlew
+           run: chmod +x gradlew
+           
+         - name: Build Release Bundle
+           run: ./gradlew bundle
+         - uses: r0adkll/sign-android-release@v1
+         
+           name: Sign Bundle
+           id: sign_app
+           with:
+                releaseDirectory: app/build/outputs/bundle/release
+                signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+                alias: ${{ secrets.ALIAS }}
+                keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+           
+         - name: Upload AAB
+           uses: actions/upload-artifact@v2
+           with:
+                name: ${{ secrets.APP_NAME }}.aab
+                path: ${{steps.sign_app.outputs.signedReleaseFile}}
