@@ -15,13 +15,13 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: Fun Words.apk
-          path: build/outputs/
+          path: app/build/outputs/apk/debug
           
       - name: Upload to google drive AAB
         uses: adityak74/google-drive-upload-git-action@v0.2
         with:
           credentials: ${{ secrets.credentials }}
-          filename: "build/outputs/ + ${{ secrets.APP_NAME }}.apk"
+          filename: "app/build/outputs/apk/debug/ + ${{ secrets.APP_NAME }}.apk"
           folderId: ${{ secrets.folderId }}
           name: ${{ secrets.APP_NAME }}.apk
           overwrite: "true" # optional boolean
@@ -58,4 +58,4 @@ jobs:
            uses: actions/upload-artifact@v2
            with:
                 name: ${{ secrets.APP_NAME }}.apk
-                path: build/outputs/
+                path: app/build/outputs/apk/debug
