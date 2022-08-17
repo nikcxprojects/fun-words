@@ -121,8 +121,8 @@ jobs:
            
          - name: Build Release Bundle
            run: ./gradlew assembleRelease
+           
          - uses: r0adkll/sign-android-release@v1
-         
            name: Sign Bundle
            id: sign_app
            with:
@@ -131,7 +131,7 @@ jobs:
                 alias: ${{ secrets.ALIAS }}
                 keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
            
-         - name: Upload APK
+         - name: Upload Bundle
            uses: actions/upload-artifact@v2
            with:
                 name: release.apk
